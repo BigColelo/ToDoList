@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = todolist.Tests
-build_property.ProjectDir = /Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist.Tests/
+build_property.ProjectDir = /Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist.Tests/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

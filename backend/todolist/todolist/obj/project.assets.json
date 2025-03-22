@@ -3067,11 +3067,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist/todolist.csproj",
+      "projectUniqueName": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist/todolist.csproj",
       "projectName": "todolist",
-      "projectPath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist/todolist.csproj",
+      "projectPath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist/todolist.csproj",
       "packagesPath": "/Users/riccardofilpi/.nuget/packages/",
-      "outputPath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist/obj/",
+      "outputPath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/riccardofilpi/.nuget/NuGet/NuGet.Config"

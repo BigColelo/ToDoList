@@ -7149,11 +7149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
+      "projectUniqueName": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
       "projectName": "todolist.Tests",
-      "projectPath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
+      "projectPath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
       "packagesPath": "/Users/riccardofilpi/.nuget/packages/",
-      "outputPath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist.Tests/obj/",
+      "outputPath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist.Tests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/riccardofilpi/.nuget/NuGet/NuGet.Config"
@@ -7168,8 +7168,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist/todolist.csproj": {
-              "projectPath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist/todolist.csproj"
+            "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist/todolist.csproj": {
+              "projectPath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist/todolist.csproj"
             }
           }
         }

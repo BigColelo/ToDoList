@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B8vH1ZHZE+I=",
+  "dgSpecHash": "8h97ra9pPYE=",
   "success": true,
-  "projectFilePath": "/Users/riccardofilpi/Documents/Projects/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
+  "projectFilePath": "/Users/riccardofilpi/Documents/GitHub/ToDoList/backend/todolist/todolist.Tests/todolist.Tests.csproj",
   "expectedPackageFiles": [
     "/Users/riccardofilpi/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/riccardofilpi/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
