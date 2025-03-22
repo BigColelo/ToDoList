@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>todolist</name>
+    </assembly>
+    <members>
+        <member name="M:todolist.BL.IUserBL.RegisterUser(todolist.Models.RegisterModel)">
+            <summary>
+            Registra un nuovo utente
+            </summary>
+            <param name="registerModel">Dati di registrazione</param>
+            <returns>L'utente creato</returns>
+        </member>
+        <member name="T:todolist.Controllers.ActivitiesController">
+            <summary>
+            Controller per la gestione delle attività
+            </summary>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.#ctor(todolist.BL.IActivitiesBL,todolist.DAO.IActivitiesDAO)">
+            <summary>
+            Costruttore del controller delle attività
+            </summary>
+            <param name="activitiesBL">Business logic per le attività</param>
+            <param name="activitiesDAO">Data access object per le attività</param>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.GetActivities">
+            <summary>
+            Ottiene tutte le attività
+            </summary>
+            <returns>Lista di tutte le attività</returns>
+            <response code="200">Ritorna la lista delle attività</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.GetActivityById(System.Int32)">
+            <summary>
+            Ottiene un'attività specifica tramite il suo ID
+            </summary>
+            <param name="id">ID dell'attività da recuperare</param>
+            <returns>L'attività richiesta</returns>
+            <response code="200">Ritorna l'attività richiesta</response>
+            <response code="404">Se l'attività non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.GetActivitiesByUser(System.Int32)">
+            <summary>
+            Ottiene tutte le attività di un utente specifico
+            </summary>
+            <param name="userId">ID dell'utente</param>
+            <returns>Lista delle attività dell'utente</returns>
+            <response code="200">Ritorna la lista delle attività dell'utente</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.CreateActivity(todolist.Models.Activity)">
+            <summary>
+            Crea una nuova attività
+            </summary>
+            <param name="activity">Dati dell'attività da creare</param>
+            <returns>L'attività creata</returns>
+            <response code="201">Ritorna l'attività creata</response>
+            <response code="400">Se i dati dell'attività non sono validi</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.UpdateActivity(System.Int32,todolist.Models.Activity)">
+            <summary>
+            Aggiorna un'attività esistente
+            </summary>
+            <param name="id">ID dell'attività da aggiornare</param>
+            <param name="activity">Nuovi dati dell'attività</param>
+            <returns>Nessun contenuto</returns>
+            <response code="204">Se l'aggiornamento è avvenuto con successo</response>
+            <response code="400">Se i dati dell'attività non sono validi</response>
+            <response code="404">Se l'attività non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.MarkActivityAsDone(System.Int32)">
+            <summary>
+            Marca un'attività come completata
+            </summary>
+            <param name="id">ID dell'attività da marcare come completata</param>
+            <returns>Nessun contenuto</returns>
+            <response code="204">Se l'operazione è avvenuta con successo</response>
+            <response code="404">Se l'attività non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.ActivitiesController.DeleteActivity(System.Int32)">
+            <summary>
+            Elimina un'attività
+            </summary>
+            <param name="id">ID dell'attività da eliminare</param>
+            <returns>Nessun contenuto</returns>
+            <response code="204">Se l'eliminazione è avvenuta con successo</response>
+            <response code="404">Se l'attività non esiste</response>
+        </member>
+        <member name="T:todolist.Controllers.UsersController">
+            <summary>
+            Controller per la gestione degli utenti
+            </summary>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.#ctor(todolist.BL.IUserBL)">
+            <summary>
+            Costruttore del controller degli utenti
+            </summary>
+            <param name="userBL">Business logic per gli utenti</param>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.GetUsers">
+            <summary>
+            Ottiene tutti gli utenti
+            </summary>
+            <returns>Lista di tutti gli utenti</returns>
+            <response code="200">Ritorna la lista degli utenti</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.GetUser(System.Int32)">
+            <summary>
+            Ottiene un utente specifico tramite il suo ID
+            </summary>
+            <param name="id">ID dell'utente da recuperare</param>
+            <returns>L'utente richiesto</returns>
+            <response code="200">Ritorna l'utente richiesto</response>
+            <response code="404">Se l'utente non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.CreateUser(todolist.Models.User)">
+            <summary>
+            Crea un nuovo utente
+            </summary>
+            <param name="user">Dati dell'utente da creare</param>
+            <returns>L'utente creato</returns>
+            <response code="201">Ritorna l'utente creato</response>
+            <response code="400">Se i dati dell'utente non sono validi o l'username è già in uso</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.UpdateUser(System.Int32,todolist.Models.User)">
+            <summary>
+            Aggiorna un utente esistente
+            </summary>
+            <param name="id">ID dell'utente da aggiornare</param>
+            <param name="user">Nuovi dati dell'utente</param>
+            <returns>Nessun contenuto</returns>
+            <response code="204">Se l'aggiornamento è avvenuto con successo</response>
+            <response code="400">Se i dati dell'utente non sono validi</response>
+            <response code="404">Se l'utente non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Elimina un utente
+            </summary>
+            <param name="id">ID dell'utente da eliminare</param>
+            <returns>Nessun contenuto</returns>
+            <response code="204">Se l'eliminazione è avvenuta con successo</response>
+            <response code="404">Se l'utente non esiste</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.Login(todolist.Controllers.LoginModel)">
+            <summary>
+            Effettua il login di un utente
+            </summary>
+            <param name="model">Credenziali di login (username e password)</param>
+            <returns>Dati dell'utente autenticato</returns>
+            <response code="200">Se il login è avvenuto con successo</response>
+            <response code="401">Se le credenziali non sono valide</response>
+        </member>
+        <member name="M:todolist.Controllers.UsersController.Register(todolist.Models.RegisterModel)">
+            <summary>
+            Registra un nuovo utente
+            </summary>
+            <param name="model">Dati di registrazione</param>
+            <returns>L'utente registrato</returns>
+            <response code="201">Se la registrazione è avvenuta con successo</response>
+            <response code="400">Se i dati di registrazione non sono validi o l'utente esiste già</response>
+        </member>
+        <member name="T:todolist.Controllers.LoginModel">
+            <summary>
+            Modello per il login
+            </summary>
+        </member>
+        <member name="P:todolist.Controllers.LoginModel.Username">
+            <summary>
+            Nome utente
+            </summary>
+        </member>
+        <member name="P:todolist.Controllers.LoginModel.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="M:todolist.DAO.IUserDAO.GetUserByUsername(System.String)">
+            <summary>
+            Ottiene un utente tramite username
+            </summary>
+            <param name="username">Username dell'utente</param>
+            <returns>L'utente, se esiste</returns>
+        </member>
+        <member name="M:todolist.DAO.IUserDAO.GetUserByEmail(System.String)">
+            <summary>
+            Ottiene un utente tramite email
+            </summary>
+            <param name="email">Email dell'utente</param>
+            <returns>L'utente, se esiste</returns>
+        </member>
+        <member name="M:todolist.DAO.IUserDAO.RegisterUser(todolist.Models.RegisterModel)">
+            <summary>
+            Registra un nuovo utente
+            </summary>
+            <param name="registerModel">Dati di registrazione</param>
+            <returns>L'utente creato</returns>
+        </member>
+        <member name="T:todolist.Models.RegisterModel">
+            <summary>
+            Modello per la registrazione di un nuovo utente
+            </summary>
+        </member>
+        <member name="P:todolist.Models.RegisterModel.Username">
+            <summary>
+            Nome utente
+            </summary>
+        </member>
+        <member name="P:todolist.Models.RegisterModel.Email">
+            <summary>
+            Email dell'utente
+            </summary>
+        </member>
+        <member name="P:todolist.Models.RegisterModel.Password">
+            <summary>
+            Password dell'utente
+            </summary>
+        </member>
+        <member name="P:todolist.Models.RegisterModel.FirstName">
+            <summary>
+            Nome dell'utente
+            </summary>
+        </member>
+        <member name="P:todolist.Models.RegisterModel.LastName">
+            <summary>
+            Cognome dell'utente
+            </summary>
+        </member>
+    </members>
+</doc>

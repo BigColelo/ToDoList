@@ -1,0 +1,65 @@
+
+services:
+  api:
+    build:
+      context: ./backend/todolist
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+      - "8443:443"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=activities;Username=postgres;Password=your_password
+      - Keycloak__Authority=http://keycloak:8080/realms/todolist
+      - Keycloak__Audience=account
+      - Keycloak__MetadataAddress=http://keycloak:8080/realms/todolist/.well-known/openid-configuration
+    networks:
+      - todolist-network
+
+  postgres:
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=your_password
+      - POSTGRES_DB=postgres
+      - POSTGRES_MULTIPLE_DATABASES=keycloak,activities
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-multiple-databases.sh:/docker-entrypoint-initdb.d/init-multiple-databases.sh
+    networks:
+      - todolist-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:21.1.1
+    command: start-dev
+    ports:
+      - "8081:8080"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://postgres:5432/keycloak
+      - KC_DB_USERNAME=postgres
+      - KC_DB_PASSWORD=your_password
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - todolist-network
+
+networks:
+  todolist-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
